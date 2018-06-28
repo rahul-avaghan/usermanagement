@@ -1,4 +1,4 @@
-# usermanagement
+# User Management
 
 Full stack example app using Java EE and Angular 4
 
