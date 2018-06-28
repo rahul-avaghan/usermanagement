@@ -1,0 +1,9 @@
+.user-list{
+    display: flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    flex-flow: wrap;
+    -ms-flex-wrap: wrap;
+    -ms-flex-flow: wrap;
+
+}

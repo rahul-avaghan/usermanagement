@@ -1,0 +1,27 @@
+<div class="main-view">
+  <div class="list-view">
+    <div class="user-header flex-row flex-spacebetween">
+      <div>
+        <h1>List of Users</h1>
+      </div>
+      <div>
+        <div>
+          <mat-form-field class="searchwrapper">
+            <input matInput [(ngModel)]="searchInput" placeholder="Search">
+          </mat-form-field>
+          <button routerLink="{{ 'createuser'}}" color="primary" mat-raised-button>Add new user</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<div class="flex-row">
+  <div class="user-list-info">
+    <app-userlist [searchInput]="searchInput"></app-userlist>
+  </div>
+  <div class="details-view">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.user-card {
+    display: flex;
+    flex-direction: row;
+    /* box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12);*/
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .07);
+    height: 15vh;
+    width: 15vw;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-left: 1vw;
+    margin-top: 1vw;
+    transition: filter 3s ease-in, opacity .5s ease-out, transform 0.5s ease-out, width 1s ease-out;
+    border: 0.05vw solid #f0f0f0;
+    padding-right: 0.25vw;
+    border-radius: 0.5vw;
+}
+
+app-user {
+    outline: none;
+}
+
+.user-card:focus,
+app-user:focus {
+    outline: none;
+    border: none;
+}
+
+.user-card:hover,
+app-user:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+}
+
+.user-card:hover .user-photos {
+    filter: sepia(50%);
+    -ms-filter: sepia(50%);
+}
+
+.user-photos>img {
+    height: 14vh;
+    width: 7vw;
+    /* padding: 0.5vw; */
+    border-radius: 0.5vw;
+}
+
+.user-photos {
+    padding: 0.2vw;
+}
+
+.user-name {
+    font-size: 1vw;
+    color: #616161;
+    text-overflow: ellipsis;
+    width: 7vw;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user-details {
+    padding: 0.5vw;
+    width: 100%;
+}
+
+.user-gender {
+    text-transform: capitalize;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 50%;
+    font-size: 0.8vw;
+    vertical-align: middle;
+    text-align: center;
+    display: table-cell;
+    line-height: 1.1vw;
+    text-transform: capitalize;
+    color: white;
+}
+
+.user-dob {
+    color: #616161;
+    font-size: 0.8vw;
+    margin-left: 1vw;
+}
+
+.male {
+    background: #303F9F;
+}
+
+.female {
+    background: #E91E63;
+}
+
+.user-lifetime {
+    color: white;
+    background: #8BC295;
+    width: 30%;
+    border-radius: 0.2vw;
+    padding: 0.3vw;
+    align-self: flex-end;
+    font-size: 0.6vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.user-interaction-icon {
+    /* background: #eceff5;
+  border-radius: 0.2vw; */
+    /* box-shadow: -1px -1px 3px 1px rgba(0, 0, 0, .07); */
+}
+
+.user-interaction-icon>img {
+    width: 1.5vw;
+    height: 1.5vw;
+}
+
+.selectedUser {
+    background: #f5f5f5;
+}
+
+.deleted {
+    opacity: 0;
+    width: 0;
+    transform: scale(0);
+}

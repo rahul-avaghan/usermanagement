@@ -1,0 +1,31 @@
+<div [ngClass]="{hideDetails:!showDetails}" class="user-details-container">
+
+  <div class="user-photo-wrapper">
+    <img class="user-photo-details" src="{{ './/assets//photos//' + user.photo}}">
+  </div>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.firstName" placeholder="First name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.lastName" placeholder="Last name">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="user.userName" placeholder="Username">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="password" [(ngModel)]="user.password" placeholder="Password">
+  </mat-form-field>
+  <mat-radio-group [(ngModel)]="user.male">
+    <mat-radio-button color="primary" value="'true'">Male</mat-radio-button>
+    <mat-radio-button color="primary" value="'false'">Female</mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="user.birthday" placeholder="Birthday">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker touchUi="true" #picker></mat-datepicker>
+  </mat-form-field>
+  <div class="flex-row flex-spacearound">
+    <button (click)="onUpdateDetails(user)" color="primary" mat-raised-button>Update user</button>
+    <button (click)="onCancel()" mat-raised-button>Cancel</button>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div (click)="selectUser()" [ngClass]="{selectedUser:user.id === selectedUserID,deleted:isDeleted}"
+  class="user-card">
+
+  <div class="user-photos">
+    <img *ngIf="user.photo" src="./assets/photos/{{user.photo}}" alt="">
+    <img *ngIf="!user.photo"src="./assets/photos/profile.png" alt="">
+  </div>
+  <diV class="user-details flex-column flex-spacebetween">
+
+    <div class="user-name">{{user.firstName}} {{user.lastName}}</div>
+    <div class="flex-row flex-aligncenter">
+      <div class="user-gender male" *ngIf="user.male === true">M</div>
+      <div class="user-gender female" *ngIf="user.male == false">F</div>
+      <div class="user-dob">{{user.birthday | date}}</div>
+    </div>
+
+    <div class="flex-row flex-end">
+      <!-- <div class="user-interaction-icon">
+        <img src="../assets/icons/edit.png" />
+      </div> -->
+      <div (click)="onDelete($event)" class="user-interaction-icon">
+        <img src="./assets/icons/delete.png" />
+      </div>
+    </div>
+
+  </diV>
+</div>

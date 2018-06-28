@@ -1,0 +1,7 @@
+<div class="user-list">
+  <app-user *ngFor="let user of userList" [user]="user" routerLink="{{ 'user' + '/' + user.id}}">
+  </app-user>
+  <div *ngIf="userList.length===0">
+    <h2> No user information available.</h2>
+  </div>
+</div>
