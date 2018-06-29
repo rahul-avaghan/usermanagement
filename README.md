@@ -3,7 +3,7 @@
 Full stack example app using Java EE and Angular 4
 
 Demo
-https://youtu.be/SqI-p53JmI0
+https://youtu.be/OcgK0Vcss_M
 
 
 Ready deployment can be found in below path
